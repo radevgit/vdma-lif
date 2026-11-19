@@ -1,0 +1,15 @@
+[package]
+name = "vdma-lif"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Rust types for the VDMA LIF 2.0.0 (Layout Interchange Format) JSON layouts"
+repository = "https://github.com/radevgit/vdma-lif"
+readme = "README.md"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[dev-dependencies]
+jsonschema = "0.61.2"
