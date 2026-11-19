@@ -17,3 +17,10 @@ Files:
 - `LICENSE-VDMA` — upstream licence (MIT, © VDMA e. V.)
 
 Do not edit these files. To update: copy again from a newer commit and note it here.
+
+Known upstream inconsistency (in the pinned commit): `LIF.md` §8.3.11 defines `loadRestriction.restrictionType`
+(enum `UNLOADED`/`LOADED`/`BOTH`, upstream commit 33f4425), but `LIF.schema` and all official examples still use
+the booleans `unloaded` and `loaded`. This crate follows the schema and examples (decision Q251).
+
+Test fixtures: `tests/examples/NN-*.json` are the JSON blocks of `examples/01-…28-*.md`, unmodified. The seven
+blocks in `examples/28.1–28.4` are VDA 5050 order fragments, not LIF files, and are not used.
